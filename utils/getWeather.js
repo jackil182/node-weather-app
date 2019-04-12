@@ -9,11 +9,11 @@ const getWeather = ({lat, long}, cb) => {
     } else if (body.error) {
       cb('unable to find location');
     } else {
-      console.log(body.daily.data[0])
+      // console.log(body.daily.data[0])
       cb(null, `${body.daily.data[0].summary} The temperature is ${
         body.currently.temperature
       } degress. The chance of rain is ${
-        body.currently.precipProbability
+        body.daily.data[0].precipProbability * 100
       }%. Max temperature today is ${body.daily.data[0].temperatureHigh}, Min temperature today is ${body.daily.data[0].temperatureLow}`);
     }
   });
