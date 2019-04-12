@@ -5,7 +5,7 @@ const getGeoData = require('../utils/geocode');
 const getWeather = require('../utils/getWeather');
 
 const app = express();
-const port = process.env.PORT || 3001;
+const port = process.env.PORT || 20001;
 
 //define paths for Express config: static folder path, views path (for handlebars templates)
 const publicDirPath = path.join(__dirname, '../public');
